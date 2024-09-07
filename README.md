@@ -1,6 +1,6 @@
-# Kali-Clean
+# Environment-Setup
 
-My kali i3 desktop setup. Some people have been asking so I wrote a quick installer to get going. 
+My i3 desktop setup. Modified version of xct's [kali-clean](https://github.com/xct/kali-clean). 
 
 After cloning the repo just run ./install.sh from a non-root user. This updates kali and installs a lot of stuff, so it will take a while. Feel free to optimize ;)
 
