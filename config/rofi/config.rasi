@@ -1,0 +1,19 @@
+configuration {
+	modi: 				"window,drun,run,ssh";
+	font: 				"DejaVu Sans Mono 12";
+	lines: 				15;
+	columns:                        3;
+	levenshtein-sort:               true;
+	auto-select:                    false;
+	combi-modi:                     "Window,run";
+	fuzzy:                          true;
+	separator-style:                "solid";
+	hide-scrollbar:                 true;
+	fullscreen:                     false;
+
+	kb-row-left:                    "Control+Page_Up,Control+c";
+	kb-row-right:                   "Control+Page_Down,Control+r";
+	kb-row-up:                      "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Control+s";
+	kb-row-down:                    "Down,Control+n,Control+t";
+}
+	@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
