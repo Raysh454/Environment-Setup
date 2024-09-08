@@ -41,6 +41,7 @@ cp config/compton/compton.conf ~/config/compton/compton.conf
 cp config/rofi/config ~/config/rofi/config
 cp .fehbg ~/.fehbg
 cp config/i3/clipboard_fix.sh ~/config/i3/clipboard_fix.sh
+cp config/tmux.conf ~/.tmux.conf
 cp -r wallpaper ~/config/i3/wallpaper 
 cp -r config/nvim ~/config/nvim
 
