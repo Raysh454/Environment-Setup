@@ -11,8 +11,5 @@ require("core.plugins.lazy")
 require("core.lsp_config")
 
 --Colorscheme
-vim.opt.termguicolors = true
+vim.o.termguicolors = true
 vim.cmd.colorscheme "catppuccin-macchiato"
-
-
-

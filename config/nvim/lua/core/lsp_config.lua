@@ -1,10 +1,20 @@
 require("mason-lspconfig").setup({
-	ensure_installed = {"pyright", "lua_ls", "clangd",  "eslint", "ts_ls", "rust_analyzer"},
-  log_level = vim.log.levels.DEBUG
+	ensure_installed = {"pyright", "lua_ls", "clangd", "java_language_server", "eslint",  "rust_analyzer", "nimls", "zls", "gopls", "omnisharp", "ts_ls", "cssls"},
+    log_level = vim.log.levels.DEBUG
 })
 
 local cmp = require('cmp')
 local cmp_autopairs = require("nvim-autopairs.completion.cmp");
+
+-- diagnostic messages
+vim.diagnostic.config({
+    virtual_text = {
+        format = function(diagnostic)
+            return diagnostic.message
+        end
+    }
+})
+
 
 cmp.setup({
 	snippet = {
@@ -83,14 +93,31 @@ require('lspconfig').lua_ls.setup {
 require('lspconfig').clangd.setup {
 	capabilities = capabilities
 }
-require('lspconfig').eslint.setup {
-    capabilities = capabilities
+require('lspconfig').java_language_server.setup {
+  capabilities = capabilities
 }
-
-require('lspconfig').ts_ls.setup {
+require('lspconfig').eslint.setup {
     capabilities = capabilities
 }
 require('lspconfig').rust_analyzer.setup({
     capabilities = capabilities,
     filetype = {"rust"},
+})
+require('lspconfig').nimls.setup({
+    capabilities = capabilities,
+})
+require('lspconfig').zls.setup({
+    capabilities = capabilities,
+})
+require('lspconfig').gopls.setup({
+    capabilities = capabilities,
+})
+require('lspconfig').omnisharp.setup({
+    capabilities = capabilities,
+})
+require('lspconfig').ts_ls.setup({
+    capabilities = capabilities,
+})
+require('lspconfig').cssls.setup({
+    capabilities = capabilities,
 })
